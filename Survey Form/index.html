@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title> Landing Page</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <meta name="viewport" content="width=device-width">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Titillium+Web:200,300,400,600,700,900" rel="stylesheet">
+    </head>
+
+    <body>
+        <h1 id="title" class="header-prim u-margin-bottom-lg"> survey form </h1>
+
+        <form id="survey-form">
+            <h2 id="description" class="header-sec u-margin-bottom-md"> let us know how we can improve freeCodeCamp </h2>
+            
+            <div class="u-margin-bottom-md">
+                <label class="input u-margin-bottom-sm">
+                    <input class="input__elem" type="text" required>
+                    <h3 class="input__label"> first name </h3>
+                </label>
+                
+                <label class="input u-margin-bottom-sm">
+                    <input class="input__elem" type="text" required>
+                    <h3 class="input__label"> last name </h3>
+                </label>
+
+                <label class="input u-margin-bottom-sm">
+                    <input class="input__elem" min="10" type="number" required>
+                    <h3 class="input__label"> age </h3>
+                </label>
+
+                <label class="select">
+                    <label class="select__label"> Which option best describes your current role?</label>                    
+                    <select class="select__elem">
+                        <option class="select__opts"> Student </option>
+                        <option class="select__opts"> Full time job </option>
+                        <option class="select__opts"> Full time learner </option>
+                        <option class="select__opts"> Prefer not to say </option>
+                        <option class="select__opts"> Other </option>
+                    </select>
+                </label>
+            </div>
+            
+            <h3 class="label u-margin-bottom-sm"> How likely is that you would recommend freeCodeCamp to a friend? </h3>
+            <div class="radio__group u-margin-bottom-lg">
+                <label class="radio__container">
+                    <div class="radio">
+                        <input class="radio__elem" name="radio" type="radio">
+                        <div class="radio__circle"> </div>
+                    </div>
+                    <h3 class="radio__label"> Definitely </h3>
+                </label>
+    
+                <label class="radio__container">
+                    <div class="radio">
+                        <input class="radio__elem" name="radio" type="radio">
+                        <div class="radio__circle"> </div>
+                    </div>
+                    <h3 class="radio__label"> maybe </h3>
+                </label>
+    
+                <label class="radio__container">
+                    <div class="radio">
+                        <input class="radio__elem" name="radio" type="radio">
+                        <div class="radio__circle"> </div>
+                    </div>
+                    <h3 class="radio__label"> not sure </h3>
+                </label>
+            </div>
+
+            <label class="select u-margin-bottom-lg">
+                <label class="select__label"> What do you like most in FCC</label>                    
+                <select class="select__elem">
+                    <option class="select__opts"> Challenges </option>
+                    <option class="select__opts"> Projects </option>
+                    <option class="select__opts"> Community </option>
+                    <option class="select__opts"> Open source </option>
+                </select>
+            </label>
+
+            <h3 class="label u-margin-bottom-sm"> Things that should be improved in the future </h3>
+            <div class="radio__group u-margin-bottom-lg">
+                <label class="radio__container">
+                    <div class="radio">
+                        <input class="radio__elem" name="check" type="checkbox">
+                        <div class="radio__circle radio__check"> </div>
+                    </div>
+                    <h3 class="radio__label"> frontend </h3>
+                </label>
+    
+                <label class="radio__container">
+                    <div class="radio">
+                        <input class="radio__elem" name="check" type="checkbox">
+                        <div class="radio__circle radio__check"> </div>
+                    </div>
+                    <h3 class="radio__label"> backend </h3>
+                </label>
+    
+                <label class="radio__container">
+                    <div class="radio">
+                        <input class="radio__elem" name="check" type="checkbox">
+                        <div class="radio__circle radio__check"> </div>
+                    </div>
+                    <h3 class="radio__label"> challenges </h3>
+                </label>
+            </div>
+
+            <h3 class="label u-margin-bottom-sm"> Any Comments or Suggestions ? </h3>
+            <textarea class="text-area u-margin-bottom-md">
+            </textarea>
+
+            <div style="text-align: center;">
+                <button class="btn" type="submit"> submit </button>
+            </div>
+        </form>
+    </body>
+</html>

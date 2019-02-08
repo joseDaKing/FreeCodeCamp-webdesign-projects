@@ -1,0 +1,239 @@
+$primary: #FFFFFF;
+$primary-dark-1: #E6ECEF;
+$primary-dark-2: #96A9B3;
+$primary-dark-3: #475156;
+
+$secondary: #03A9F4;
+$quaternary: #66BB6A;
+
+$shadow-light: 0px 0px 50px rgba(0, 0, 0, 0.075);
+$shadow-dark: 0px 0px 50px rgba(0, 0, 0, 0.1);
+
+//default transition value
+$ts: all 300ms ease 0s;
+
+:root {
+    font-family: 'Open Sans', sans-serif;    
+    font-size: 10px;
+}
+
+*, *::before, *::after {
+    font-family: inherit;
+    font-size: inherit;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+#title {
+    text-align: center;
+    color: $primary-dark-3;
+    font-weight: 600;
+    font-size: 3rem;
+    word-spacing: 3px; 
+    letter-spacing: 1.5px;
+    text-transform: capitalize;
+}
+
+#sub-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 300;
+    color: $primary-dark-2;
+    line-height: 4rem;
+    margin-bottom: 6rem;
+}
+
+#img-div {
+    box-shadow: $shadow-dark;
+    padding: 3rem;
+    width: 100%;
+    max-width: 85rem;
+    
+    margin: auto;
+    margin-bottom: 5rem;
+    margin-top: 3.5rem;
+}
+
+#img-container {
+    width: 100%;
+    max-width: 70rem;
+    margin: auto;
+}
+
+#image {
+    width: 100%;
+    margin: auto;
+    border: solid 2px $primary-dark-2;
+}
+
+#img-caption {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 200;
+    width: 100%;
+    max-width: 70rem;
+    margin: auto;
+    color: $secondary;
+    margin-top: 2rem;
+}
+
+#tribute-info {
+    width: 100%;
+    max-width: 85rem;
+    margin: auto;
+    margin-bottom: 3rem;
+
+    padding: 4rem;
+    box-shadow: $shadow-dark;
+
+    > ul {
+        font-size: 1.6rem;
+        font-weight: 100;
+        word-spacing: 3px;
+        line-height: 2.5rem;
+
+        color: $primary-dark-3;
+        margin: 0px;
+        padding-left: 0px;
+
+        > li {
+            padding: 3rem 2rem;
+            list-style: none;
+            margin: 0px;
+        }
+
+        > li:not(:last-child) {
+            border-bottom: solid 0.8px $secondary;
+        }
+
+        strong {
+            font-weight: 600;
+        }
+    }
+}
+
+#headline {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: $primary-dark-2;
+    margin-bottom: 6rem;
+}
+
+#link-container {
+    width: 100%;
+    max-width: 85rem;
+    margin: auto;
+    margin-bottom: 2rem;
+
+    padding: 2rem 0px;
+    box-shadow: $shadow-dark;
+
+    > h3 {
+        text-align: center;
+        font-size: 1.6rem;
+        font-weight: 100;
+        word-spacing: 2px;
+        font-size: 1.6rem;
+        font-weight: 100;
+        word-spacing: 3px;
+        line-height: 2.5rem;
+        margin: 0px;
+
+        color: $primary-dark-3;
+    }
+
+    blockquote {
+        width: 100%;
+        max-width: 65rem;
+        margin: auto;
+        padding: 3rem 0;
+    
+        div, p {
+            display: inline;
+            font-size: 1.7rem;
+            font-weight: 100;
+        }
+    
+        p {
+            color: $quaternary;
+            font-weight: 400;
+        }
+    
+        div {
+            color: $primary-dark-3;
+        }
+    }
+}
+
+#tribute-link {
+    text-decoration: none;
+    color: $primary-dark-2;
+    position: relative;
+    display: inline-block;
+    padding: 0.4rem .8rem;
+    transition: $ts;
+    font-weight: 400;
+
+    span {
+        z-index: 1;
+        position: relative;
+    }
+
+    &::before {
+        content: "";
+        display: block;
+
+        position: absolute;
+        z-index: 0;
+
+        background-color: $quaternary;
+
+        top: 0px;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+
+        transition: $ts;
+        transition-duration: 0.45s;
+
+        transform-origin: left;
+        transform: scaleX(0);
+    }
+
+    &:hover {
+        transition: $ts;
+        color: $primary;
+        
+        &::before {
+            transition-duration: 0.45s;
+            transform: scaleX(1); 
+        }
+    }
+}
+
+@media only screen and (max-width: 680px) {
+    #link-container, #tribute-info, #img-div {
+        padding-left: 2rem;
+        padding-right: 2rem;
+
+        > ul {
+            > li {
+                text-align: center;
+            }
+        }
+
+        blockquote {
+            text-align: center;
+            line-height: 2rem;
+        }
+    }
+
+    #link-container {
+        margin-bottom: 0px;
+    }
+}

@@ -1,0 +1,345 @@
+:root {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body {
+  padding: 0px;
+  margin: 0px;
+  background-color: #E6ECEF;
+  padding: 4rem;
+}
+
+*, *::after, *::before {
+  box-sizing: border-box;
+  position: relative;
+  backface-visibility: hidden;
+  margin: 0px;
+  padding: 0px;
+}
+
+.header-prim {
+  font-family: 'Open Sans', sans-serif;
+  text-transform: uppercase;
+  color: #475156;
+  font-size: 3.2rem;
+  letter-spacing: 3px;
+  word-spacing: 12px;
+  margin: 0px;
+  font-weight: bolder;
+}
+
+.header-sec {
+  font-family: 'Open Sans', sans-serif;
+  color: #03A9F4;
+  font-size: 2.2rem;
+  letter-spacing: 1.2px;
+  word-spacing: 4px;
+  margin: 0px;
+  font-weight: 400;
+}
+
+.header-sec::first-letter {
+  text-transform: uppercase;
+}
+
+.input, .select {
+  display: block;
+}
+
+.input__elem, .select__elem { 
+  transition: all 0.3s ease;
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: #E6ECEF;
+  padding: 1.5rem 2rem;
+  border-radius: 0.5rem;
+  display: block;
+
+  font-family: 'Titillium Web', sans-serif;
+  color: #475156;
+  font-size: 1.8rem;
+  z-index: 0;
+
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+.input__label, .select__label, .radio__label, .label {
+  transition: all 0.3s ease;
+  position: absolute;
+  z-index: 1;
+  width: 10rem;
+
+  font-family: 'Open Sans', sans-serif;
+  color: #96A9B3;
+  text-transform: capitalize;
+  font-size: 1.6rem;
+  word-spacing: 3px;
+  letter-spacing: 1px;
+  font-weight: 400;
+  
+  margin: 0px;
+  margin-left: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: text;
+}
+
+.input__elem:focus ~ .input__label,
+.input__elem:valid ~ .input__label,
+.select__label, .radio__label, .label {
+  transition: all 0.3s ease;
+  top: -25%;
+  color: #66BB6A;
+  font-weight: 300;
+}
+
+.select {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+.select::before {
+  content: "< >";
+  position: absolute;
+  display: block;
+  height: 100%;
+
+  right: 0px;
+  margin: 0px;
+  margin-right: 2rem;
+  z-index: 1;
+
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: bolder;
+  color: #475156;
+  font-size: 2.8rem;
+  transform: rotate(90deg);
+}
+
+.select__opt {
+  width: 100%;
+  z-index: 0;
+}
+
+.select__label {
+  width: 100%;
+}
+
+.radio {
+  height: 2.7rem;
+  width: 2.7rem;
+  display: block;
+  cursor: pointer;
+}
+
+.radio__elem {
+  display: none;
+}
+
+.radio__circle {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+
+  background-color: transparent;
+  border-radius: 100%;
+  border: solid 1px #96A9B3;
+  transition: all 0.3s ease;
+}
+
+.radio__circle::before {
+  content: "";
+  position: absolute;
+
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin: auto;
+
+  width: 50%;
+  height: 50%;
+  border-radius: 100%;
+
+  background-color: #03A9F4;
+  opacity: 1;
+  transform: scale(0);
+  transition: all 0.3s ease;
+  
+}
+
+.radio__elem:checked ~ .radio__circle {
+  transition: all 0.3s ease;
+  border-color: #03A9F4;
+}
+
+.radio__elem:checked ~ .radio__circle::before {
+  transition: all 0.3s ease;
+  transform: scale(1);
+  opacity: 1;
+}
+
+.radio__label {
+  width: auto;
+  position: relative;
+
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  transform: none;
+
+  margin: auto;
+  margin-right: 0px;
+  margin-left: 1rem;
+
+  user-select: none;
+  cursor: pointer;
+  color: #96A9B3;
+}
+
+.radio__container {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.radio__container:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.radio__group {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.radio__check::before {
+  content: "\2713";
+  text-align: center;
+  border-radius: 0px;
+  background-color: transparent;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bolder;
+  color: white;
+}
+
+.radio__check {
+  border-radius: 0px !important;
+}
+
+.radio__circle:hover {
+  transition: all 0.3s ease;
+  background-color: #E6ECEF;
+}
+
+.radio__elem:checked ~ .radio__check {
+  transition: all 0.3s ease;
+  background-color: #03A9F4;
+}
+
+.radio__elem:checked ~ .radio__check::before {
+  transition: all 0.3s easse;
+  transform: scale(1.4);
+}
+
+.label {
+  position: static;
+  width: auto;
+  height: auto;
+  color: #66BB6A;
+}
+
+.text-area {
+  display: block;
+  width: 100%;
+  min-height: 20rem;
+  resize: vertical;
+  border: none;
+  background-color: white;
+  box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+
+#title, #description {
+  text-align: center;
+}
+
+#survey-form {
+  background-color: white;
+  width: 100%;
+  max-width: 80rem;
+  margin: auto;
+  border-radius: 0.5rem;
+  padding: 4rem;
+}
+
+.u-margin-bottom-sm {
+  margin-bottom: 4rem;
+}
+
+.u-margin-bottom-md {
+  margin-bottom: 6rem;
+}
+
+.u-margin-bottom-lg {
+  margin-bottom: 12rem;
+}
+
+.u-margin-bottom-xl {
+  margin-bottom: 16rem;
+}
+
+.btn {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-progress-appearance: none;
+  border: none;
+  background-color: #03A9F4;
+  padding: 1.5rem 3rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-family: "Open sasn", sans-serif;
+  font-weight: bolder;
+  color: white;
+  letter-spacing:2px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transition: all 0.3s ease;
+  filter: brightness(90%);
+  transform: scale(1.05);
+}
+
+.btn:active {
+  transition: all 0.3s ease;
+  transform: scale(1.1);
+}
+
+/*
+$primary: #FFFFFF;
+$primary-dark-1: #E6ECEF;
+$primary-dark-2: #96A9B3;
+$primary-dark-3: #475156;
+
+$secondary: #03A9F4;
+$quaternary: #66BB6A;
+
+$shadow-light: 0px 0px 50px rgba(0, 0, 0, 0.075);
+$shadow-dark: 0px 0px 50px rgba(0, 0, 0, 0.1);
+
+$sans: 'Open Sans', sans-serif;
+$web: 'Titillium Web', sans-serif;
+
+//default transition value
+$ts: all 300ms ease 0s;
+*/

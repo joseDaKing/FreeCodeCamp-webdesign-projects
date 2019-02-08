@@ -1,0 +1,509 @@
+:root {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body {
+  padding: 0px;
+  margin: 0px;
+}
+
+*, *::after, *::before {
+  box-sizing: border-box;
+  position: relative;
+  backface-visibility: hidden;
+}
+
+main {
+  z-index: 0;
+}
+
+#header {
+  background-color: #66BB6A;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-around;
+  position: sticky;
+  top: 0px;
+  z-index: 2;
+}
+
+#header-img {
+  width: 100%;
+  display: block;
+  margin: auto;
+}
+
+#nav-bar {
+  flex-basis: 20rem ul;
+  margin: 0px;
+  padding: 0px;
+}
+
+#nav-bar ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+  padding: 0px;
+}
+
+#nav-bar li {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+#nav-bar a {
+  display: block;
+  text-decoration: none;
+  font-size: 2.25rem;
+  
+  font-family: "Titillium Web", sans-serif;
+
+  text-transform: capitalize;
+  color: white;
+
+  font-weight: 300;
+  transition: all 0.3s;
+  padding: 3rem;
+}
+
+#nav-bar li:hover a {
+  transition: all 0.3s;
+  transform: scale(1.2);
+}
+
+.logo {
+  margin: 0px;
+  padding: 2rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-basis: 25rem;
+}
+
+.logo__img-box {
+  width: 6rem;
+  user-select: none;
+}
+
+img, input[value="follow our newsletter"], #price-table a {
+  user-select: none;
+}
+
+.logo__brand {
+  text-align: center;
+  margin-left: 1.4rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2rem;
+  color: #FFFFFF;
+  word-spacing: 2px;
+  letter-spacing: 16px;
+  font-family: "Open Sans" sans-serif;
+  font-weight: 800;
+  width: 2rem;
+}
+
+#info * {
+  margin: 0px;
+}
+
+#info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 30rem);
+  width: 100%;
+  max-width: 100rem;
+  margin: auto;
+  margin-bottom: 12rem;
+  justify-content: center;
+
+  grid-gap: 2rem;
+}
+
+#info img {
+  width: 100%;
+  margin: auto;
+}
+
+#info div {
+  width: 12rem;
+  margin: auto;
+  margin-bottom: 6rem;
+} 
+
+#info h1 {
+  margin-bottom: 1rem;
+  text-align: center;
+  text-transform: capitalize;
+  color: #475156;
+  font-family: 'Titillium Web', sans-serif;
+  letter-spacing: 2px;
+  font-size: 2.2rem;
+}
+
+#info p {
+  color: #96A9B3;
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 2px;
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+#info p::first-letter {
+  text-transform: uppercase;
+}
+
+section {
+  padding-top: 10rem;
+  padding-bottom: 4rem;
+  padding-left: 2rem;
+  padding-right: 2rem; 
+}
+
+#how-it-works {
+  background-color: #E6ECEF;
+}
+
+#video {
+  display: block;
+  border: none;
+  width: 100%;
+  max-width: 70rem;
+  height: 40rem;
+  margin: auto;
+  margin-top: 4rem;
+  border: solid 1rem #96A9B3;
+}
+
+.title {
+  margin-bottom: 12rem;
+  text-align: center;
+  text-transform: uppercase;
+  color: #475156;
+  font-family: 'Titillium Web', sans-serif;
+  letter-spacing: 2px;
+  font-size: 3.2rem;
+}
+
+#price-table {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 30rem);
+  justify-content: center;
+  grid-column-gap: 6rem;
+  grid-row-gap: 3rem;
+}
+
+#price-table div {
+  background-color: #E6ECEF; 
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+#price-table div * {
+  padding: 0rem 3rem;
+}
+
+#price-table header {
+  background-color: #03A9F4;
+  padding: 0rem;
+
+  text-align: center;
+  text-transform: capitalize;
+  color: white;
+  font-family: 'Titillium Web', sans-serif;
+  letter-spacing: 2px;
+  word-spacing: 3px;
+  font-size: 2.4rem;
+  line-height: 4rem;
+  font-weight: 700;
+}
+
+#price-table h2, h1 {
+  font-size: 2rem;
+  
+  font-family: "Titillium Web", sans-serif;
+
+  text-transform: capitalize;
+  color: #96A9B3;
+  filter: brightness(75%);
+
+  font-weight: 300;
+}
+
+#price-table h1 {
+  color: #03A9F4;
+  font-size: 2.2rem;
+  font-weight: 500;
+}
+
+#price-table a {
+  display: inline-block;
+  font-size: 2.3rem;
+  text-decoration: none;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 300;
+  background-color: #03A9F4;
+  color: white;
+  padding: 2rem 5rem;
+  line-height: 0rem;
+  transition: all 0.3s;
+}
+
+#price-table a:hover {
+  transition: all 0.3s;
+  transform: scale(1.1);
+}
+
+#price-table a:active {
+  transition: all 0.3s;
+  transform: scale(1.2);
+  filter: brightness(75%);
+}
+
+#footer {
+  padding: 3rem;
+  z-index: 1;
+  display: block;
+  background-color: #475156;
+  width: 100%;
+}
+
+#form *{
+  display: block;
+  width: 100%;
+}
+
+#form *:not(:last-child) {
+  margin-bottom: 1rem;   
+}
+
+#email {
+  outline: none;
+  padding: 1rem 2rem;
+  font-family: "Open Sans" sans-serif;
+  color: #475156;
+  border: none;  
+  font-size: 1.7rem;
+  transition: all 0.3s;
+}
+
+#email::placeholder {
+  color: #96A9B3;
+  transition: all 0.3s;
+}
+
+#email:valid {
+  background-color: #66BB6A;
+  color: white;
+  transition: all 0.3s;
+}
+
+#email:focus:invalid {
+  background-color: salmon;
+  color: white;
+  transition: all 0.3s;
+}
+
+#email:focus:invalid::placeholder, 
+#email:valid::placeholder {
+  transition: all 0.3s;
+  color: white;
+}
+
+#submit {
+  color:white;
+  background-color: #66BB6A;
+  border: none;
+  outline: none;
+  font-family: "Open Sans", sans-serif;
+  text-transform: capitalize;
+  font-size: 1.7rem;
+  padding: 2rem;
+  line-height: 0px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+#submit:hover {
+  transition: all 0.3s;
+  transform: scale(1.1); 
+}
+
+#submit:active {
+  transition: all 0.3s;
+  transform: scale(1.2);
+  filter: brightness(75%); 
+}
+
+#contact-info div * {
+  display: block;
+  color: white;
+  text-decoration: none;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  padding: 1.5rem 2.5rem;
+  letter-spacing: 3px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 100;
+}
+
+#contact-info div {
+  display: flex;
+  justify-content: center;
+}
+
+#contact-info a {
+  transition: all 0.3s;
+}
+
+#contact-info a:hover {
+  transition: all 0.3s;
+  transform: scale(1.1);
+}
+
+#contact-info a:active {
+  transition: all 0.3s;
+  transform: scale(1.2);
+  filter: brightness(75%);
+}
+
+
+#footer h1 {
+  text-align: center;
+  margin: 0px;
+}
+
+#footer-inner-container {
+  display: flex;
+  width: 100%;
+  max-width: 85rem;
+  margin: auto;
+}
+
+#contact-info {
+  flex-grow: 2;
+}
+
+#form {
+  flex-grow: 1;
+  flex-basis: 20rem;
+}
+
+#nav-tg-btn-input {
+  display: none;
+}
+
+@media only screen and (max-width: 769px) {
+  #footer-inner-container {
+    flex-direction: column;
+  }
+
+  #form {
+    flex-grow: 1;
+    flex-basis: auto;
+    margin-bottom: 4rem;
+  }
+
+  #form *:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+
+  #contact-info *:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+
+  #nav-bar {
+    background-color: #475156;
+    position: fixed;
+    filter: brightness(130%);
+
+    top: 10rem;
+    right: 0px;
+    bottom: 0px;
+    width: 20rem;
+
+    transition: all 0.5s ease;
+    transform: translateX(101%);
+    flex-grow: 1;
+  }
+
+  #nav-tg-btn-input:checked ~ #nav-bar {
+    transition: all 0.5s ease;
+    transform: translateX(0px); 
+  }
+
+  #nav-bar ul {
+    display: block;
+    text-align: left;
+  }
+
+  #nav-bar a {
+    transform-origin: left;
+  }
+
+  #header {
+    justify-content: stretch;
+  }
+
+  label[for="nav-tg-btn-input"] {
+    width: 4rem;
+    height: 4rem;
+    margin: auto;
+    margin-right: 4rem;
+    cursor: pointer;
+  }
+
+  label[for="nav-tg-btn-input"] > div {
+    width: 100%;
+    height: 2px;
+    background-color: white;
+  }
+
+  label[for="nav-tg-btn-input"] > div:not(:last-child) {
+    margin: auto;
+    margin-bottom: 1rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #contact-info > div {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #nav-bar {
+    width: 100%;
+  }
+
+  #nav-bar ul {
+    text-align: center;
+  }
+
+  #nav-bar a {
+    transform-origin: center;
+  }
+
+}
+
+/*
+$primary: #FFFFFF;
+$primary-dark-1: #E6ECEF;
+$primary-dark-2: #96A9B3;
+$primary-dark-3: #475156;
+
+$secondary: #03A9F4;
+$quaternary: #66BB6A;
+
+$shadow-light: 0px 0px 50px rgba(0, 0, 0, 0.075);
+$shadow-dark: 0px 0px 50px rgba(0, 0, 0, 0.1);
+
+$sans: 'Open Sans', sans-serif;
+$web: 'Titillium Web', sans-serif;
+
+//default transition value
+$ts: all 300ms ease 0s;
+*/

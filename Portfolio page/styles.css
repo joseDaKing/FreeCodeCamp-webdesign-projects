@@ -1,0 +1,395 @@
+:root {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body {
+  padding: 0px;
+  margin: 0px;
+}
+
+*, *::after, *::before {
+  box-sizing: border-box;
+  position: relative;
+  backface-visibility: hidden;
+}
+
+ul {
+  padding: 0px;
+  margin: 0px;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+/* navbar */
+#navbar {
+  display: flex;
+  position: sticky;
+  top: 0px;
+  box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.2),
+              5px 5px 20px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+#navbar::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background-color: #03A9F4;
+  z-index: -1;
+}
+
+#navbar ul {
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: 28rem;
+}
+
+#navbar a {
+  text-transform: capitalize;
+  font-size: 2rem;
+  display: block;
+  padding: 2rem;
+
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 3px;
+  color: white;
+  height: 100%;
+  margin: auto;
+  transition: all 0.3s;
+  user-select: none;
+}
+
+#navbar a:hover {
+  transition: all 0.3s;
+  transform: scale(1.2);
+}
+
+#navbar .brand-name {
+  text-align: center;
+  flex-basis: 16rem;
+  text-transform: uppercase;
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+  font-size: 2.5rem;
+  font-weight: bolder;
+  letter-spacing: 20px;
+  margin-left: 12rem;
+}
+
+main {
+  z-index: 0;
+}
+
+.header-prim-dark {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  text-transform: uppercase;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+  word-spacing: 4px;
+  color: #475156;
+  font-weight: bolder;
+}
+
+.header-prim-light {
+  text-align: center;
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  word-spacing: 4px;
+  color:#96A9B3;
+  font-weight: 300;
+}
+
+.header-sec {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  text-transform: uppercase;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+  word-spacing: 4px;
+  color: #66BB6A;
+  font-weight: bolder;
+}
+
+.img-container {
+  overflow: hidden;
+  width: 100%;
+  max-width: 50rem;
+  margin: auto;
+  border-radius: 2rem;
+}
+
+.img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.u-margin-bottom-s {
+  margin-bottom: 5rem;
+}
+
+.u-margin-bottom-m {
+  margin-bottom: 10rem;
+}
+
+.u-margin-bottom-l {
+  margin-bottom: 15rem;
+}
+
+.section {
+  padding: 10rem 3rem;
+}
+
+.section:first-child {
+  z-index: 1;
+}
+
+.section:not(:first-child) {
+  z-index: 0;
+}
+
+.section--prim-dark {
+  background-color: #E6ECEF;;
+}
+
+.social {
+  display: flex;
+  background-color: white;
+  padding: 1.5rem;
+  box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);
+  width: 50rem;
+  user-select: none;
+
+  height: 10rem;
+
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin: auto;
+
+  transform: translateY(50%);
+}
+
+.social__link {
+  flex-basis: 5rem;
+  flex-grow: 1;
+  padding: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.social__link:not(:last-child) {
+  border-right: solid 2px #E6ECEF;
+}
+
+.social__img {
+  width: 70%;
+  margin: auto;
+  display: block
+}
+
+.project-title {
+  width: 30rem;
+  height: 40rem;
+  overflow: hidden;
+  background-color: white;
+  display: block;
+  transition: all .3s ease;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  transition: all .3s ease;
+}
+
+.project-title:hover {
+  transition: all .3s ease;
+  transform: scale(1.05);
+  box-shadow: 0px 0px 70px rgba(0, 0, 0, 0.1);
+}
+
+.project-title:active {
+  transition: all 0.3s ease;
+  filter: brightness(90%);
+}
+
+.project-title__img-container {
+  margin: 0px;
+  width: 100%;
+  height: 85%;
+}
+
+.project-title__img {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  transform: translateX(-20%);
+}
+
+.project-title__header {
+  text-align: center;
+  transform: translateY(7.5%);
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 2rem;
+  color: #66BB6A;
+  letter-spacing: 3px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 40rem);
+  grid-gap: 4rem;
+
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+#navbar input, #navbar label {
+  display: none;
+}
+
+.social-navbar {
+  display: none;
+}
+
+@media only screen and (max-width: 1130px) {
+  #navbar .brand-name {
+    margin-left: 0px;
+  }
+
+  #navbar ul {
+    margin-right: 0px;
+  }
+
+  #navbar {
+    padding: 0px 5rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #navbar ul {
+    display: block;
+    position: fixed;
+
+    right: 0px;
+    top: 7.45rem;
+    bottom: 0px;
+
+    width: 20rem;
+    background-color: #475156;
+    transform: translateX(100%);
+    transition: all 0.6s ease;
+  }
+
+  #navbar li a {
+    transform-origin: left;
+  }
+
+  #navbar label {
+    width: 4rem;
+    height: 5rem;
+    margin: auto;
+    margin-right: 0px;
+    display: block;
+    transform: translateY(22.5%);
+    cursor: pointer;
+  }
+
+  #navbar label div {
+    width: 100%;
+    height: 4px;
+    background-color: white;
+  }
+
+  #navbar label div:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+
+  #navbar input:checked ~ ul {
+    transition: all 0.6 ease;
+    transform: translateX(0px);
+  }
+}
+
+@media only screen and (max-width: 601px) {
+  .social-section {
+    display: none;
+  }
+
+  .social-navbar {
+    display: flex;
+  }
+
+  .social {
+    position: relative;
+    height: auto;
+    width: 15rem;
+    margin: auto;
+    flex-direction: column;
+    transform: none;
+    background-color: transparent;
+    box-shadow: none;
+  }
+  
+  .social__link:not(:last-child) {
+    border-right: solid 2px transparent;
+  }
+  
+  .social__img {
+    height: 70%;
+    margin-left: 0px;
+    display: block
+  }
+}
+
+@media only screen and (max-width: 512px) {
+  #navbar ul {
+    width: 100%;
+  }
+
+  #navbar li a {
+    text-align: center;
+    transform-origin: center;
+  }
+
+  .projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 1fr);
+    grid-gap: 4rem;
+  
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+  }
+}
+
+@media only screen and (max-width: 376px) {
+  #navbar .brand-name {
+    display: none;
+  }
+
+  #navbar ul {
+    top: 4.9rem;
+  }
+
+  #navbar .social a {
+    margin: 0px;
+    padding: 1rem;
+  }
+}
